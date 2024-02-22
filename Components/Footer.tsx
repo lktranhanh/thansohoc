@@ -16,13 +16,39 @@ export const Footer: FC = () => {
    return (
       <footer>
          <Wrap justify="center" my={1}>
-            <Tooltip label={colorMode + " mode"} hasArrow>
-               <CustomCard>
+            <Tooltip>
+               <CustomCard
+                as="a"
+                href="https://thelotuscoach.vn"
+                target="_self"
+               >
                   <Image
                      src="/Images/numerologyPNG.png"
                      alt="numerology logo"
                      placeholder="blur"
                      blurDataURL="/Images/numerologyPNG.png"
+                     style={{
+                        cursor: "pointer",
+                     }}
+                     width={300}
+                     height={300}
+                     // onClick={toggleColorMode}
+                  />
+               </CustomCard>
+            </Tooltip>
+            
+
+          
+         </Wrap>
+         <Wrap justify="center" my={1}>
+         <Tooltip label={colorMode + " mode"} hasArrow>
+               <CustomCard
+               >
+                  <Image
+                     src="/Images/day_nightPNG.png"
+                     alt="numerology logo"
+                     placeholder="blur"
+                     blurDataURL="/Images/day_nightPNG.png"
                      style={{
                         cursor: "pointer",
                      }}
@@ -32,23 +58,7 @@ export const Footer: FC = () => {
                   />
                </CustomCard>
             </Tooltip>
-
-            <Tooltip label="Source code" hasArrow>
-               <CustomCard
-                  as="a"
-                  href="https://github.com/minhphuc010194/NumerologyWebApp"
-                  target="_blank"
-               >
-                  <Icon
-                     as={AiFillGithub}
-                     boxSize={12}
-                     border="3px solid"
-                     rounded="100%"
-                  />
-               </CustomCard>
-            </Tooltip>
-            <Feeacback />
-         </Wrap>
+            </Wrap>
       </footer>
    );
 };
