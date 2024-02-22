@@ -23,7 +23,7 @@ export const Numerology: FC = () => {
    const color = useColorModeValue("black", "white");
    const colorBorder = useColorModeValue("gray.200", "gray.600");
    const refInputName = useRef<HTMLInputElement>(null);
-   const [name, setName] = useState<string>("Phạm Vương"); // sửa trên local của visual này lun à ???um
+   const [name, setName] = useState<string>("Phạm Ngọc Vương"); // sửa trên local của visual này lun à ???um
    const [birth, setBirth] = useState<string>("1991-05-27");
    const deferredName = useDeferredValue(name);
    const deferredBirth = useDeferredValue(birth);
@@ -68,7 +68,7 @@ export const Numerology: FC = () => {
                border="1px solid"
                borderColor={colorBorder}
             >
-               <Box as="legend" fontSize={20} fontWeight={800} color="red.400">
+               <Box as="legend" fontSize={20} fontWeight={800} color="#d20e03">                                              
                   Chỉ Số (Index)
                </Box>
 
