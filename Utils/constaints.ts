@@ -1,1 +1,1 @@
-export const Numerology = "Numerology";
+export const Numerology = "Tra Cứu Numerology TheLotusCoach";
