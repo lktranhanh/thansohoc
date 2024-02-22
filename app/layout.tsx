@@ -10,12 +10,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
    return (
       <html lang="en">
          <head>
-            <title>Numerology Web App</title>
+            <title>Tra Cứu Numerology TheLotusCoach</title>
             <meta
                name="description"
-               content="Numerology Web App - Tra cứu thần số học"
+               content="Tra Cứu Numerology TheLotusCoach"
             />
-            <link rel="icon" href="/Images/numerologyPNG.png" />
+            <link rel="icon" href="/Images/logoPNG.png" />
             {/* <script
                async
                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4328746565330736"
@@ -25,30 +25,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
          <body>
             <ChakraProvider theme={theme}>
-               <Script
-                  id={id}
-                  strategy="lazyOnload"
-                  src={`https://www.googletagmanager.com/gtag/js?id=${
-                     process.env?.NEXT_PUBLIC_GOOGLE_ANALYTICS ??
-                     "UA-137260564-1"
-                  }`}
-               />
+               
 
                {children}
             </ChakraProvider>
-            <Script id={id} strategy="lazyOnload">
-               {`
-                     window.dataLayer = window.dataLayer || [];
-                     function gtag(){dataLayer.push(arguments);}
-                     gtag('js', new Date());
-                     gtag('config', '${
-                        process.env?.NEXT_PUBLIC_GOOGLE_ANALYTICS ??
-                        "UA-137260564-1"
-                     }', {
-                     page_path: window.location.pathname,
-                     });
-                  `}
-            </Script>
+           
          </body>
       </html>
    );
