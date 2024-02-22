@@ -20,7 +20,7 @@ export const DisplayCard: FC<PropTypes> = ({
             <Text fontSize="small" color="gray.400">
                {name}
             </Text>
-            <Text mt={2} fontSize="3xl" color="red.400" fontWeight={600}>
+            <Text mt={2} fontSize="3xl" color="#d20e03" fontWeight={600}>
                {content}
             </Text>
          </Box>
