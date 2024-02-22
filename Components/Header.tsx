@@ -4,9 +4,9 @@ import Head from "next/head";
 export const Header: FC = () => {
    return (
       <Head>
-         <title>Numerology Web App</title>
-         <meta name="description" content="Numerology Web App" />
-         <link rel="icon" href="/Images/numerologyPNG.png" />
+         <title>Tra Cứu Numerology TheLotusCoach</title>
+         <meta name="description" content="Tra Cứu Numerology TheLotusCoach" />
+         <link rel="icon" href="/Images/logoPNG.png" />
       </Head>
    );
 };
