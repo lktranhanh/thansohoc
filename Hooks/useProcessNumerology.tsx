@@ -25,6 +25,7 @@ export const useProcessNumerology = (
       const year = moment(birthDay).format("YYYY");
       const currentYear = moment().format("YYYY");
       const currentMonth = moment().format("MM");
+      const currentDay = moment().format("DD"); 
       const txtName = fullName.trim();
       const name = removeAccents(txtName.toLocaleUpperCase());
       let completedName: string = "";
@@ -72,6 +73,7 @@ export const useProcessNumerology = (
       const challenges = ` ${challenge1} ${challenge2} ${challenge3} ${challenge4}`;
       const yearIndividual = sumAdjacent(Number(currentYear), date + month);
       const monthIndividual = sumAdjacent(yearIndividual, Number(currentMonth));
+      const dayIndividual = sumAdjacent(monthIndividual, Number(currentDay)); // cái này xử lý sau
       const linkPersonalityAndSoul = substractAdjacent(personality, soul);
       const dateOfBirth = sumAdjacent(date, 0);
       return [
@@ -82,17 +84,29 @@ export const useProcessNumerology = (
             name_en: "Path of life",
          },
          {
+            key: "balance",
+            value: balance,
+            name: "Cân bằng",
+            name_en: "Balance",
+         },
+         {
             key: "mission",
             value: mission,
             name: "Sứ mệnh",
             name_en: "Mission",
          },
-         { key: "soul", value: soul, name: "Linh hồn", name_en: "Soul" },
          {
             key: "connect",
             value: connect,
             name: "Kết nối",
             name_en: "Connection",
+         },
+         { key: "soul", value: soul, name: "Linh hồn", name_en: "Soul" },
+         {
+            key: "dateOfBirth",
+            value: dateOfBirth,
+            name: "Ngày sinh",
+            name_en: "Date Of Birth",
          },
          {
             key: "personality",
@@ -100,24 +114,17 @@ export const useProcessNumerology = (
             name: "Nhân cách",
             name_en: "Personality",
          },
-         { key: "passion", value: passion, name: "Đam mê", name_en: "Passion" },
+         {
+            key: "linkPersonalityAndSoul",
+            value: linkPersonalityAndSoul,
+            name: "Liên kết nhân cách và linh hồn",
+            name_en: "Link Personality And Soul",
+         },
          {
             key: "mature",
             value: mature,
             name: "Trưởng thành",
             name_en: "Mature",
-         },
-         {
-            key: "balance",
-            value: balance,
-            name: "Cân bằng",
-            name_en: "Balance",
-         },
-         {
-            key: "subconsciousPower",
-            value: subconsciousPower,
-            name: "Sức mạnh tiềm thức",
-            name_en: "Subconscious Power",
          },
          {
             key: "missingNumbers",
@@ -132,23 +139,12 @@ export const useProcessNumerology = (
             name_en: "Rational Thinking",
          },
          {
-            key: "way",
-            value: way,
-            name: "Chặng",
-            name_en: "Way",
+            key: "subconsciousPower",
+            value: subconsciousPower,
+            name: "Sức mạnh tiềm thức",
+            name_en: "Subconscious Power",
          },
-         {
-            key: "challenges",
-            value: challenges,
-            name: "Thách thức",
-            name_en: "Challenges",
-         },
-         {
-            key: "dateOfBirth",
-            value: dateOfBirth,
-            name: "Ngày sinh",
-            name_en: "Date Of Birth",
-         },
+         { key: "passion", value: passion, name: "Đam mê", name_en: "Passion" },
          {
             key: "yearIndividual",
             value: yearIndividual,
@@ -162,10 +158,22 @@ export const useProcessNumerology = (
             name_en: "Individual Month",
          },
          {
-            key: "linkPersonalityAndSoul",
-            value: linkPersonalityAndSoul,
-            name: "Liên kết nhân cách và linh hồn",
-            name_en: "Link Personality And Soul",
+            key: "way",
+            value: way,
+            name: "Chặng",
+            name_en: "Way",
+         },
+         {
+            key: "dayIndividual",
+            value: dayIndividual,
+            name: "Ngày cá nhân",
+            name_en: "Individual Day",
+         },
+         {
+            key: "challenges",
+            value: challenges,
+            name: "Thách thức",
+            name_en: "Challenges",
          },
       ];
    }, [fullName, birthDay]);
