@@ -14,6 +14,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                name="description"
                content="Tra Cứu Numerology TheLotusCoach"
             />
+            <meta 
+               name="robots" 
+               content="index, follow">
+             <meta 
+                name="google-adsense-account" 
+                content="ca-pub-8703671366589995">  
             <link rel="icon" href="/Images/logoPNG.png" />
             <Script 
                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8703671366589995" 
