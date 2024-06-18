@@ -72,7 +72,7 @@ export const Numerology: FC = () => {
                   Chỉ Số (Index)
                </Box>
 
-               <Wrap spacing="10px" justify="center" pb={2}>
+               <Wrap spacing="5px" justify="center" pb={2}>
                   {data.map((item, index: number) => (
                      <RenderItem key={id + index} item={item} />
                   ))}
