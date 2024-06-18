@@ -6,10 +6,6 @@ import { theme } from "Utils/themes";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
    const id = Date.now().toString();
-   useEffect(() => {
-     (window.adsbygoogle = window.adsbygoogle || []).push({});
-   }, []);
-
    return (
       <html lang="en">
          <head>
