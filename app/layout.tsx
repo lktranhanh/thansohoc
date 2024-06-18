@@ -16,7 +16,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                content="Tra Cứu Numerology TheLotusCoach"
             />
             <link rel="icon" href="/Images/logoPNG.png" />
-            
+            <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8703671366589995" crossorigin="anonymous" />
+         
          </head>
 
          <body>
