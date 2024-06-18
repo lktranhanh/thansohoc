@@ -6,6 +6,7 @@ import { theme } from "Utils/themes";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
    const id = Date.now().toString();
+
    return (
       <html lang="en">
          <head>
@@ -15,11 +16,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                content="Tra Cứu Numerology TheLotusCoach"
             />
             <link rel="icon" href="/Images/logoPNG.png" />
+            
          </head>
+
          <body>
             <ChakraProvider theme={theme}>
+               
+
                {children}
             </ChakraProvider>
+           
          </body>
       </html>
    );
