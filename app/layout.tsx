@@ -6,7 +6,6 @@ import { theme } from "Utils/themes";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
    const id = Date.now().toString();
-
    return (
       <html lang="en">
          <head>
@@ -19,11 +18,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <link rel="icon" href="/Images/logoPNG.png" />
             <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8703671366589995"/>
          </head>
-
          <body>
             <ChakraProvider theme={theme}>
-               
-
                {children}
             </ChakraProvider>
            
