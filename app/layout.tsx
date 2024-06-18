@@ -1,5 +1,5 @@
 // import Head from "next/head";
-import { ReactNode } from "react";
+import React, { ReactNode, useEffect } from 'react';
 import { ChakraProvider } from "@chakra-ui/react";
 import Script from "next/script";
 import { theme } from "Utils/themes";
