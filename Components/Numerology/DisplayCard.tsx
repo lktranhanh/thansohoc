@@ -14,13 +14,13 @@ export const DisplayCard: FC<PropTypes> = ({
    ...rest
 }) => {
    return (
-      <HStack spacing={4}>
+      <HStack spacing={3}>
          <Box p={1} shadow="base" borderWidth="1px" {...rest}>
-            <Heading fontSize="md">{title}</Heading>
+            <Heading fontSize="sm">{title}</Heading>
             <Text fontSize="small" color="gray.400">
                {name}
             </Text>
-            <Text mt={2} fontSize="3xl" color="#d20e03" fontWeight={600}>
+            <Text mt={2} fontSize="xl" color="#d20e03" fontWeight={600}>
                {content}
             </Text>
          </Box>
