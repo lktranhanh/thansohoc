@@ -1,5 +1,4 @@
-// import Head from "next/head";
-import React, { ReactNode, useEffect } from 'react';
+import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import { ChakraProvider } from "@chakra-ui/react";
 import Script from "next/script";
@@ -7,34 +6,24 @@ import { theme } from "Utils/themes";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
    const id = Date.now().toString();
+
    return (
-      <html lang="en">
-         <head>
+      <ChakraProvider theme={theme}>
+         <Head>
             <title>Tra Cứu Numerology TheLotusCoach</title>
-            <meta
-               name="description"
-               content="Tra Cứu Numerology TheLotusCoach"
-            />
-             <Head>
+            <meta name="description" content="Tra Cứu Numerology TheLotusCoach" />
             <meta name="robots" content="index, follow" />
             <meta name="google-adsense-account" content="ca-pub-8703671366589995" />
-            </Head>
             <link rel="icon" href="/Images/logoPNG.png" />
-            <Script 
-               src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8703671366589995" 
+            <Script
+               src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8703671366589995"
                crossOrigin="anonymous"
-               strategy="lazyOnload"/>
-         
-         </head>
-
+               strategy="lazyOnload"
+            />
+         </Head>
          <body>
-            <ChakraProvider theme={theme}>
-               
-
-               {children}
-            </ChakraProvider>
-           
+            {children}
          </body>
-      </html>
+      </ChakraProvider>
    );
 }
